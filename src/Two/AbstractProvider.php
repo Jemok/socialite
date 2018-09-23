@@ -140,12 +140,15 @@ abstract class AbstractProvider implements ProviderContract
     abstract protected function mapUserToObject(array $user);
 
     /**
-     * Redirect the user of the application to the provider's authentication screen.
+     *  Redirect the user of the application to the provider's authentication screen.
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @param $state
+     * @return RedirectResponse
+     *
      */
-    public function redirect()
+    public function redirect($state)
     {
+        dd($state);
         $state = null;
 
         if ($this->usesState()) {

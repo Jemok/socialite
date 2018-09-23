@@ -9,7 +9,7 @@ interface ProviderInterface
      *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
-    public function redirect();
+    public function redirect($state);
 
     /**
      * Get the User instance for the authenticated user.
